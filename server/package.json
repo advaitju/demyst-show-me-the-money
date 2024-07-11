@@ -12,7 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "xero-node": "^8.0.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
