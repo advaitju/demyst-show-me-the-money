@@ -1,11 +1,13 @@
-import { QueryKey, useQuery } from '@tanstack/react-query';
+import { QueryKey, useQuery, UseQueryResult } from '@tanstack/react-query';
 
 interface UseGetApiParams {
   api: string;
   queryKey: QueryKey;
 }
 
-export const useGetApi = ({ api, queryKey }: UseGetApiParams) =>
+type UseGetApi = <TData>(params: UseGetApiParams) => UseQueryResult<TData>;
+
+export const useGetApi: UseGetApi = ({ api, queryKey }: UseGetApiParams) =>
   useQuery({
     queryKey,
     queryFn: async () => {
