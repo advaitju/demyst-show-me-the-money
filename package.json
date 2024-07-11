@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "install-deps": "concurrently 'cd ./client && npm i' 'cd ./client && npm run build' 'cd ./server && npm i'",
-    "start": "concurrently 'cd ./client && npm start' 'cd ./server && npm start'"
+    "start": "concurrently 'cd ./server && npm start' 'cd ./client && npm run preview'"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
