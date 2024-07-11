@@ -9,12 +9,6 @@ export const BalanceSheet = () => {
     queryKey: [api],
   });
 
-  if (query.data) {
-    console.log(query.data.Reports[0]);
-  }
-
-  // return 'BS';
-
   if (query.isFetching) return 'Loading...';
   if (query.isError) return 'Error!';
   if (query.data === undefined) return 'No data';
@@ -23,7 +17,6 @@ export const BalanceSheet = () => {
 
   const HeaderData = data.Rows.filter(({ RowType }) => RowType === 'Header');
   const SectionData = data.Rows.filter(({ RowType }) => RowType === 'Section');
-  console.log(HeaderData, SectionData);
 
   return (
     <>
