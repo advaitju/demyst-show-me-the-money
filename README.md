@@ -17,7 +17,7 @@ npm start
 
 You should see the below screen:
 
-<!-- ![screenshot](screenshot.png) -->
+![screenshot](screenshot.png)
 
 ## Comments
 
