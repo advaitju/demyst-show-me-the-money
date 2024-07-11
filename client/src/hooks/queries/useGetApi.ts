@@ -11,7 +11,11 @@ export const useGetApi: UseGetApi = ({ api, queryKey }: UseGetApiParams) =>
   useQuery({
     queryKey,
     queryFn: async () => {
-      const res = await fetch(`${import.meta.env.VITE_API_URL}/${api}`);
+      const res = await fetch(
+        `${
+          import.meta.env.VITE_API_URL || 'http://localhost:4000/api/v1'
+        }/${api}`
+      );
       return await res.json();
     },
   });
