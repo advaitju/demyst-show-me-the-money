@@ -2,6 +2,10 @@
 
 ## Quick Start
 
+1. You need to have the Xero API image running and port forwarded to 3000.
+   - The Node server will check `http://localhost:3000` to fetch data.
+1. Next run these commands in the root of this repo.
+
 ```
 npm i
 npm run install-deps
