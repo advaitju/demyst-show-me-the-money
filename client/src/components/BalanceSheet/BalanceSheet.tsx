@@ -58,8 +58,6 @@ export const BalanceSheet = () => {
           ))}
         </tbody>
       </table>
-
-      <pre>{query.data && JSON.stringify(query.data, null, 2)}</pre>
     </>
   );
 };
