@@ -2,7 +2,6 @@ import { app } from './utils/app';
 import { PORT } from './constants';
 import { router } from './router';
 
-// Health check
 app.get('/healthz', (_req, res) => {
   res.status(200).send();
 });
