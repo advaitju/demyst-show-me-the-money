@@ -1,5 +1,11 @@
 {
   "name": "demyst-show-me-the-money",
   "version": "1.0.0",
-  "scripts": {}
+  "scripts": {
+    "install": "concurrently 'cd ./client && npm i' 'cd ./client && npm run build' 'cd ./server && npm i'",
+    "start": "concurrently 'cd ./client && npm start' 'cd ./server && npm start"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
 }
